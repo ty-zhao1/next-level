@@ -8,24 +8,24 @@ const Nav = () => {
     const router = useRouter();
   
     return (
-      <nav className="flex justify-around p-4 bg-blue-100">
+      <nav className="flex justify-around p-4 bg-grey-100">
         <Link href="/">
-        <div className={`group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-400 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 text-gray-900`}>
+        <div className={`group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-blue-200 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 text-gray-900`}>
             <span className="inline-block transition-transform group-hover:-translate-x-1 motion-reduce:transform-none">{router.pathname !== "/" ? "<- " : ""}</span> Home
         </div>
         </Link>
         <Link href="/about">
-          <div className={`group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-400 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 text-gray-900 ${router.pathname !== "/about" ? "" : "group-hover:translate-x-1"}`}>
+          <div className={`group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-green-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 text-gray-900 ${router.pathname !== "/about" ? "" : "group-hover:translate-x-1"}`}>
             About <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">{router.pathname !== "/about" ? " ->" : ""}</span>
           </div>
         </Link>
         <Link href="/exp">
-          <div className={`group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-400 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 text-gray-900 ${router.pathname !== "/experience" ? "" : "group-hover:translate-x-1"}`}>
+          <div className={`group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-pink-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 text-gray-900 ${router.pathname !== "/experience" ? "" : "group-hover:translate-x-1"}`}>
             Experience <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">{router.pathname !== "/exp" ? " ->" : ""}</span>
           </div>
         </Link>
         <Link href="/projects">
-          <div className={`group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-400 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 text-gray-900 ${router.pathname !== "/projects" ? "" : "group-hover:translate-x-1"}`}>
+          <div className={`group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-orange-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 text-gray-900 ${router.pathname !== "/projects" ? "" : "group-hover:translate-x-1"}`}>
             Projects <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">{router.pathname !== "/projects" ? " ->" : ""}</span>
           </div>
         </Link>
