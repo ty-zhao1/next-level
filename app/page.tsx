@@ -10,16 +10,6 @@ export default function Home() {
                 <p className="text-lg text-gray-700">Welcome to my website!</p>
             </div>
 
-
-            {/* <div className="my-12">
-                <Image
-                    src="/web_headshot.jpg" // path to your image
-                    alt="Picture of myself"
-                    width={150} // the width of your image
-                    height={300} // the height of your image
-                />
-            </div> */}
-
             <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-3 lg:text-left">
                 <Link
                     href="/about"
@@ -226,3 +216,13 @@ export default function Home() {
                         Explore the Next.js 13 playground.
                     </p>
                 </a> */}
+
+
+                {/* <div className="my-12">
+                <Image
+                    src="/web_headshot.jpg" // path to your image
+                    alt="Picture of myself"
+                    width={150} // the width of your image
+                    height={300} // the height of your image
+                />
+            </div> */}
