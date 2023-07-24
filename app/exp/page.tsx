@@ -12,7 +12,7 @@ const experiences = [
     companyName: 'Pfizer',
     duration: 'Jan 2020 - Dec 2021',
     role: 'Software Engineer',
-    description: 'Working as an intern on a machine learning-based tool to predict bacterial and viral antigenicity. Applications to influenza, COVID-19, and other infectious diseases.\
+    description: 'Working as an intern on a machine learning-based tool to predict viral antigenicity. Applications to influenza, COVID-19, and other infectious diseases.\
     ',
   },
   {
