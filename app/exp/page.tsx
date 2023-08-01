@@ -42,7 +42,7 @@ const experiences = [
     companyName: 'AlphaGogoat: Reinforcement Learning for Pokemon Battles',
     duration: 'Mar 2023 - Jun 2023',
     role: 'Software Engineer',
-    description: 'Programmed a Reinforcement Learning Agent that played Pokémon in real time on the Pokémon Showdown battle simulator.',
+    description: 'Programmed a Reinforcement Learning Agent in a team of 2 that played Pokémon in real time on the Pokémon Showdown battle simulator.',
     show_role: false,
   },
   {
@@ -51,7 +51,7 @@ const experiences = [
     companyName: 'Guitar Hero in C using Raspberry Pi, Arduino',
     duration: 'Oct 2022 - Dec 2022',
     role: 'Software Engineer',
-    description: 'Coded Guitar Hero video game from scratch using Arduino and Raspberry Pi\'s.\
+    description: 'Coded Guitar Hero video game in a team of 3 from scratch using Arduino and Raspberry Pi\'s.\
     Processed i/o from guitar controller and Arduino, used wireless transmitters for guitar controller and Fast Fourier Transform to process notes.',
     show_role: false,
   },
