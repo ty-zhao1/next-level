@@ -88,13 +88,13 @@ export default function Exp() {
             {/* Text animation from the right */}
             <motion.div initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} className="flex-1">
               <div className="flex flex-col items-center"> {/* Wrap text and line in a flex container */}
-                <div className="text-center">
+                <div className="text-left">
                   <h3 className="text-2xl font-semibold">{experience.companyName}</h3>
                   <p className="mt-2 text-gray-500 dark:text-gray-200">
                     {experience.show_role ? `${experience.duration} | ${experience.role}` : experience.duration}
                     
                   </p>
-                  <p className="mt-2 text-lg text-gray-500 dark:text-gray-200"> {/* Adjust margin-bottom here */}
+                  <p className="mt-2 text-lg text-gray-500 dark:text-gray-200">
                     {experience.description}
                   </p>
                 </div>
