@@ -9,84 +9,57 @@ const experiences = [
   {
     id: 1,
     logoSrc: '/pfizer.png',
-    companyName: 'Pfizer',
-    duration: 'Jan 2020 - Dec 2021',
-    role: 'Software Engineer',
-    description: 'Working as an intern on a machine learning-based tool to predict viral antigenicity. Applications to influenza, COVID-19, and other infectious diseases.\
+    companyName: 'ML Intern @ Pfizer',
+    duration: 'Jun 2023 - Present',
+    role: 'ML Intern',
+    description: 'Working on a machine learning-based tool to predict viral antigenicity. \
+    Potential applications to influenza, COVID-19, and other infectious viruses.\
     ',
+    show_role: false,
   },
   {
     id: 2,
     logoSrc: '/gastro.png',
-    companyName: 'Stanford',
-    duration: 'Jan 2020 - Dec 2021',
-    role: 'Software Engineer',
-    description: 'Description of Company 2',
+    companyName: 'Researcher @ Stanford',
+    duration: 'Jan 2023 - Present',
+    role: 'Researcher',
+    description: 'Currently building a predictive model used by Stanford Medical School for the severity of hepatic encephalopathy based on patient health records.',
+    show_role: false,
   },
   // Add more experiences as needed
   {
     id: 3,
-    logoSrc: '/next.svg',
-    companyName: 'Dummy',
-    duration: 'Jan 2020 - Dec 2021',
+    logoSrc: '/nextlogo.png',
+    companyName: 'Personal Website',
+    duration: 'Jun 2023 - Present',
     role: 'Software Engineer',
-    description: 'Description of Company 2',
+    description: 'Designed and built my personal website using Next.js, Tailwind CSS, and Framer Motion. Code done in TypeScript. This website is a work in progress.',
+    show_role: false,
   },
   {
     id: 4,
-    logoSrc: '/next.svg',
-    companyName: 'Dummy',
-    duration: 'Jan 2020 - Dec 2021',
+    logoSrc: '/gogoat2.png',
+    companyName: 'AlphaGogoat: Reinforcement Learning for Pokemon Battles',
+    duration: 'Mar 2023 - Jun 2023',
     role: 'Software Engineer',
-    description: 'Description of Company 2',
+    description: 'Programmed a Reinforcement Learning Agent that played Pokémon in real time on the Pokémon Showdown battle simulator.',
+    show_role: false,
+  },
+  {
+    id: 4,
+    logoSrc: '/guitarhero.png',
+    companyName: 'Guitar Hero in C using Raspberry Pi, Arduino',
+    duration: 'Oct 2022 - Dec 2022',
+    role: 'Software Engineer',
+    description: 'Coded Guitar Hero video game from scratch using Arduino and Raspberry Pi\'s.\
+    Processed i/o from guitar controller and Arduino, used wireless transmitters for guitar controller and Fast Fourier Transform to process notes.',
+    show_role: false,
   },
 ];
 
-// export default function Exp() {
-//   return (
-//     <div className="min-h-screen bg-pink-100">
-//       <Nav />
-//       <div className="px-4 py-4 max-w-md mx-auto sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
-//         <h2 className="text-4xl font-extrabold text-black dark:text-white">
-//           My experience
-//         </h2>
-//         {experiences.map((experience, index) => (
-//           <div key={experience.id} className="flex items-center mt-8">
-//             <div className="mr-4 w-48 h-48 rounded-md overflow-hidden">
-//               <Image
-//                 src={experience.logoSrc}
-//                 alt={`${experience.companyName} Logo`}
-//                 width={200}
-//                 height={200}
-//               />
-//             </div>
-//             <div className="flex-1 grid place-items-center">
-//               <div className="text-center">
-//                 <h3 className="text-2xl font-semibold">{experience.companyName}</h3>
-//                 <p className="mt-2 text-gray-500 dark:text-gray-200">
-//                   {experience.duration} | {experience.role}
-//                 </p>
-//                 <p className="mt-2 text-lg text-gray-500 dark:text-gray-200">
-//                   {experience.description}
-//                 </p>
-//               </div>
-//               {index !== experiences.length - 1 && (
-//                 <div className="w-full">
-//                   <hr className="border-t border-gray-300 dark:border-gray-700 my-4" />
-//                 </div>
-//               )}
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-
 export default function Exp() {
   return (
-    <div className="min-h-screen bg-pink-100">
+    <div className="min-h-screen bg-pink-50">
       <Nav />
       <div className="px-4 py-4 max-w-md mx-auto sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
         <h2 className="text-4xl font-extrabold text-black dark:text-white">
@@ -118,7 +91,8 @@ export default function Exp() {
                 <div className="text-center">
                   <h3 className="text-2xl font-semibold">{experience.companyName}</h3>
                   <p className="mt-2 text-gray-500 dark:text-gray-200">
-                    {experience.duration} | {experience.role}
+                    {experience.show_role ? `${experience.duration} | ${experience.role}` : experience.duration}
+                    
                   </p>
                   <p className="mt-2 text-lg text-gray-500 dark:text-gray-200"> {/* Adjust margin-bottom here */}
                     {experience.description}

@@ -32,7 +32,7 @@ export default function About() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-green-100">
+    <div className="min-h-screen bg-green-50">
       <Nav />
       <div className="px-4 py-12 max-w-md mx-auto sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
         <motion.h2

@@ -24,12 +24,12 @@ const Nav = () => {
         </Link>
         <Link href="/exp">
           <div className={`group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-pink-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 text-gray-900 ${pathname !== "/experience" ? "" : "group-hover:translate-x-1"}`}>
-            Experience <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">{pathname !== "/exp" ? " ->" : ""}</span>
+            Technical <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">{pathname !== "/exp" ? " ->" : ""}</span>
           </div>
         </Link>
-        <Link href="/projects">
+        <Link href="/other">
           <div className={`group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-orange-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 text-gray-900 ${pathname !== "/projects" ? "" : "group-hover:translate-x-1"}`}>
-            Projects <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">{pathname !== "/projects" ? " ->" : ""}</span>
+            Other <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">{pathname !== "/other" ? " ->" : ""}</span>
           </div>
         </Link>
       </nav>
