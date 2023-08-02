@@ -73,7 +73,7 @@ export default function About() {
           animate={textAnimation}
           variants={textAnimationVariants}
         >
-          I'm interested in the usage of various computational methods to provide practical, effective solutions for real problems in the world, regardless of industry. My work so far has mostly revolved around healthcare, but I'm always looking to apply my knowledge in and learn from other fields.
+          I'm interested in the usage of various computational methods to provide practical, effective solutions for real problems in the world. My work so far has mostly revolved around healthcare, but I'm always looking to apply my knowledge in and learn from other fields.
         </motion.p>
         <motion.p
           className="mt-4 text-lg text-gray-500 dark:text-gray-200 text-center"
@@ -81,7 +81,17 @@ export default function About() {
           animate={textAnimation}
           variants={textAnimationVariants}
         >
-          Outside of tech, I am a dedicated classical musician, having played cello for over 14 years. I also enjoy weightlifting, photography, and trying delicious food.
+          Outside of tech, I am a dedicated classical musician, having played cello for over 12 years. I also enjoy weightlifting, photography, and trying delicious food.
+        </motion.p>
+        <motion.p
+          className="mt-4 text-lg text-gray-500 dark:text-gray-200 text-center"
+          initial="hidden"
+          animate={textAnimation}
+          variants={textAnimationVariants}
+        >
+          Feel free to reach out to me at <a className="text-blue-500 hover:text-blue-600" href="mailto:adamzhao@stanford.edu" target="_blank">
+            adamzhao@stanford.edu
+            </a>
         </motion.p>
       </div>
     </div>

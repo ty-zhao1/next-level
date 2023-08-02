@@ -9,7 +9,8 @@ export default function Home() {
                 <h1 className="text-7xl text-black dark:text-gray-300">Adam Zhao</h1>
                 <p className="text-lg text-gray-700 dark:text-gray-400">Welcome to my website!</p>
             </div>
-
+            
+            {/* Sun Image for Light Mode */}
             <div className="dark:hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0">
                 <Image src="/sun.svg" alt="SVG in Light Mode" width="300" height="300" />
             </div>
