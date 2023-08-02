@@ -32,11 +32,11 @@ export default function About() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-green-50">
+    <div className="min-h-screen bg-green-50 dark:bg-gray-700">
       <Nav />
       <div className="px-4 py-12 max-w-md mx-auto sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
         <motion.h2
-          className="text-4xl font-extrabold text-black dark:text-white text-center"
+          className="text-4xl font-extrabold text-black dark:text-gray-200 text-center"
           initial="hidden"
           animate={headerAnimation}
           variants={headerAnimationVariants}
@@ -58,7 +58,7 @@ export default function About() {
             />
           </motion.div>
         </div>
-        <hr className="my-8 border-gray-300 dark:border-gray-700" />
+        <hr className="my-8 border-gray-300 dark:border-gray-200" />
         <motion.p
           className="mt-4 text-lg text-gray-500 dark:text-gray-200 text-center"
           initial="hidden"

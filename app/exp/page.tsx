@@ -58,13 +58,13 @@ const experiences = [
 ];
 export default function Exp() {
   return (
-    <div className="min-h-screen bg-pink-50">
+    <div className="min-h-screen bg-pink-50 dark:bg-gray-700">
       <Nav />
       <div className="px-4 py-4 max-w-md mx-auto sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
-        <h2 className="text-4xl font-extrabold text-black dark:text-white">
+        <h2 className="text-4xl font-extrabold text-black dark:text-gray-100">
           Technical
         </h2>
-        <p className="mt-4 text-lg text-gray-500 dark:text-gray-200">
+        <p className="mt-4 text-lg text-gray-500 dark:text-gray-300">
           Here are a few of my past experiences and projects.
         </p>
         {experiences.map((experience) => (
@@ -90,8 +90,8 @@ export default function Exp() {
             {/* Text animation from the right */}
             <motion.div initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} className="flex-1">
               <div className="text-left w-full">
-                <h3 className="text-2xl font-semibold">{experience.companyName}</h3>
-                <p className="mt-2 text-gray-500 dark:text-gray-200">
+                <h3 className="text-2xl font-semibold dark:text-gray-200">{experience.companyName}</h3>
+                <p className="mt-2 text-gray-500 dark:text-gray-300">
                   {experience.show_role ? `${experience.duration} | ${experience.role}` : experience.duration}
                 </p>
                 <p className="mt-2 text-lg text-gray-500 dark:text-gray-200">
@@ -105,61 +105,3 @@ export default function Exp() {
     </div>
   );
 }
-
-
-
-// export default function Exp() {
-//   return (
-//     <div className="min-h-screen bg-pink-50">
-//       <Nav />
-//       <div className="px-4 py-4 max-w-md mx-auto sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
-//         <h2 className="text-4xl font-extrabold text-black dark:text-white">
-//           My experience
-//         </h2>
-//         {experiences.map((experience, index) => (
-//           <motion.div
-//             key={experience.id}
-//             initial={{ opacity: 0, x: -20 }}
-//             animate={{ opacity: 1, x: 0 }}
-//             transition={{ duration: 0.5, delay: index * 0.1 }}
-//             className="flex items-center mt-8"
-//           >
-//             {/* Logo animation from the left */}
-//             <motion.div initial={{ opacity: 0, x: -100 }} animate={{ opacity: 1, x: 0 }} className="mr-4">
-//               <div className="w-48 h-48 rounded-md overflow-hidden">
-//                 <Image
-//                   src={experience.logoSrc}
-//                   alt={`${experience.companyName} Logo`}
-//                   width={200}
-//                   height={200}
-//                 />
-//               </div>
-//             </motion.div>
-
-//             {/* Text animation from the right */}
-//             <motion.div initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} className="flex-1">
-//               <div className="flex flex-col items-center"> {/* Wrap text and line in a flex container */}
-//                 <div className="text-left">
-//                   <h3 className="text-2xl font-semibold">{experience.companyName}</h3>
-//                   <p className="mt-2 text-gray-500 dark:text-gray-200">
-//                     {experience.show_role ? `${experience.duration} | ${experience.role}` : experience.duration}
-                    
-//                   </p>
-//                   <p className="mt-2 text-lg text-gray-500 dark:text-gray-200">
-//                     {experience.description}
-//                   </p>
-//                 </div>
-//                 {/* Horizontal line */}
-//                 {/* {index !== experiences.length - 1 && (
-//                   <div className="w-full">
-//                     <hr className="border-t border-gray-300 dark:border-gray-700 my-4" />
-//                   </div>
-//                 )} */}
-//               </div>
-//             </motion.div>
-//           </motion.div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
