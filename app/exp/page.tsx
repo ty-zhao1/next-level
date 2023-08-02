@@ -33,7 +33,7 @@ const experiences = [
     companyName: 'Personal Website',
     duration: 'Jun 2023 - Present',
     role: 'Software Engineer',
-    description: 'Designed and built my personal website using Next.js, Tailwind CSS, and Framer Motion. Code done in TypeScript. This website is a work in progress.',
+    description: 'Designed and built my personal website in TypeScript using Next.js, Tailwind CSS, and Framer Motion. This website is a work in progress.',
     show_role: false,
   },
   {
