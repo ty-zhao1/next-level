@@ -1,10 +1,7 @@
 'use client'
-import Link from 'next/link';
 import Nav from '../../components/Nav';
-import { NextPage } from 'next';
 import Image from 'next/image';
-import { useEffect, useRef } from 'react';
-import { motion, useAnimation, Variants } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const headerVariants = {
   // hidden: { x: "-100vw", opacity: 0 },

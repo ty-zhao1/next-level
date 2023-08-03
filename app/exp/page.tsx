@@ -1,7 +1,5 @@
 'use client'
-import Link from 'next/link';
 import Nav from '../../components/Nav';
-import { NextPage } from 'next';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
