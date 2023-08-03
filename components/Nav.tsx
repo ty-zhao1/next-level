@@ -8,8 +8,7 @@ import { usePathname } from 'next/navigation'
 export default function Nav() {
   const pathname = usePathname();
 
-  type LinkPath = "/" | "/about" | "/exp" | "/other";
-  const arrowDirection = (linkPath: LinkPath) => {
+  const arrowDirection = (linkPath: string) => {
     if (pathname === linkPath) return { symbol: '', translate: '' };
     if (pathname > linkPath) return { symbol: '<- ', translate: '-translate-x-1' };
     return { symbol: ' ->', translate: 'translate-x-1' };
