@@ -60,6 +60,17 @@ export default function SphereGrid(): JSX.Element {
         //   sphere.userData.mouseZ = force;
         });
       };
+
+      const onTouchMove = (event: TouchEvent) => {
+        // Ensure you're accessing touch event properties correctly
+        if (event.touches.length > 0) {
+            const touch = event.touches[0];
+            onMouseMove({
+                clientX: touch.clientX,
+                clientY: touch.clientY
+            } as MouseEvent); // We're reusing the onMouseMove function by passing in the touch event properties in the format it expects.
+        }
+    };
       
       const animate = () => {
         requestAnimationFrame(animate);
@@ -75,10 +86,12 @@ export default function SphereGrid(): JSX.Element {
         renderer.render(scene, camera);
     };
     document.addEventListener('mousemove', onMouseMove);
+    document.addEventListener("touchmove", onTouchMove);
     animate();
 
     return () => {
       window.removeEventListener('mousemove', onMouseMove);
+      document.addEventListener("touchmove", onTouchMove);
       spheres.forEach((sphere) => scene.remove(sphere));
       renderer.dispose();
     };
