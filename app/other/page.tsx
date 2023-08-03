@@ -9,7 +9,7 @@ import { motion, useAnimation, Variants } from 'framer-motion';
 const headerVariants = {
   // hidden: { x: "-100vw", opacity: 0 },
   // visible: { x: 0, opacity: 1, transition: { type: "spring", stiffness: 60 } },
-  hidden: { x: 100, opacity: 0 },
+  hidden: { x: -100, opacity: 0 },
   visible: { x: 0, opacity: 1, transition: { duration: 0.6 } },
 };
 
@@ -17,7 +17,7 @@ const headerVariants = {
 const contentVariants = {
   // hidden: { x: "100vw", opacity: 0 },
   // visible: { x: 0, opacity: 1, transition: { type: "spring", stiffness: 60 } },
-  hidden: { x: -100, opacity: 0 },
+  hidden: { x: 100, opacity: 0 },
   visible: { x: 0, opacity: 1, transition: { duration: 0.6 } },
 };
 
