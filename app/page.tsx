@@ -11,12 +11,12 @@ export default function Home() {
             </div>
             
             {/* Sun Image for Light Mode */}
-            <div className="dark:hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0">
+            <div className="dark:hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 sm:w-48 sm:h-48">
                 <Image src="/sun.svg" alt="SVG in Light Mode" width="300" height="300" />
             </div>
 
             {/* Moon Image for Dark Mode */}
-            <div className="hidden dark:block dark:absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0">
+            <div className="hidden dark:block dark:absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 sm:w-48 sm:h-48">
                 <Image src="/moon.svg" alt="Moon in Dark Mode" width={150} height={150} />
             </div>
             
