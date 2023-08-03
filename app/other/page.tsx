@@ -68,7 +68,7 @@ export default function Other() {
             variants={contentVariants}
           >
             <p className="mt-2 text-lg text-gray-500 dark:text-gray-200">
-            I've taken an interest in photography, specifically clouds and landscape. Here are some of my favorite photos I've taken. Feel free to scroll left and right.
+            I&apos;ve taken an interest in photography, specifically clouds and landscape. Here are some of my favorite photos I&apos;ve taken. Feel free to scroll left and right.
             </p>
             <div className="flex overflow-x-auto space-x-4 mt-4">
               {photos.map((photo, index) => (
@@ -101,8 +101,8 @@ export default function Other() {
             animate="visible"
             variants={contentVariants}
           >
-                     I'm a clasically trained cellist with over 12 years of experience. I've been in various orchestras, chamber groups and other ensembles, playing pieces by Beethoven, Mozart, Tchaikovsky, and many more.
-         I'm currently a member of the Stanford Symphony Orchestra, and am open to playing gigs and other events.
+                     I&apos;m a clasically trained cellist with over 12 years of experience. I&apos;ve been in various orchestras, chamber groups and other ensembles, playing pieces by Beethoven, Mozart, Tchaikovsky, and many more.
+         I&apos;m currently a member of the Stanford Symphony Orchestra, and am open to playing gigs and other events.
           </motion.p>
         </div>
 
@@ -122,8 +122,8 @@ export default function Other() {
             animate="visible"
             variants={contentVariants}
           >
-            I'm a foodie at heart. I love tasting and cooking (albeit to varying success) foods from various cultures around the world. I'm always looking for new recipes to try, so feel free to send me some!
-         Recently I've tried to make original fusion dishes, such as a Korean-Mexican fusion burrito, and a Japanese-Italian fusion sushi pizza.
+            I&apos;m a foodie at heart. I love tasting and cooking (albeit to varying success) foods from various cultures around the world. I&apos;m always looking for new recipes to try, so feel free to send me some!
+         Recently I&apos;ve tried to make original fusion dishes, such as a Korean-Mexican fusion burrito, and a Japanese-Italian fusion sushi pizza.
           </motion.p>
         </div>
       </div>
