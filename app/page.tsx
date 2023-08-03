@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Nav from '../components/Nav';
 export default function Home() {
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-blue-50 dark:bg-black">
+        <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-blue-50 dark:bg-olive">
             {/* <Nav/> */}
             <div className="relative flex flex-col place-items-center mt-24">
                 <h1 className="text-7xl text-black dark:text-gray-300">Adam Zhao</h1>
@@ -17,7 +17,7 @@ export default function Home() {
 
             {/* Moon Image for Dark Mode */}
             <div className="hidden dark:block dark:absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0">
-                <Image src="/moon.png" alt="Moon in Dark Mode" width={150} height={150} />
+                <Image src="/moon.svg" alt="Moon in Dark Mode" width={150} height={150} />
             </div>
             
             <div className="gap-x-12 grid text-center lg:mb-0 lg:grid-cols-3 lg:text-left">
