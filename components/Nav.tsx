@@ -11,9 +11,11 @@ export default function Nav() {
   console.log('Current Pathname:', pathname);
   const paths = ["/", "/about", "/exp", "/other"];
 
+  type LinkPath = "/" | "/about" | "/exp" | "/other";
+
   const currentIndex = paths.indexOf(pathname);
   console.log('Current Index:', currentIndex);
-  const arrowDirection = (linkPath) => {
+  const arrowDirection = (linkPath: LinkPath) => {
     const linkIndex = paths.indexOf(linkPath);
     console.log('Link Index for', linkPath, 'is:', linkIndex);
     if (linkIndex === currentIndex) return "";
