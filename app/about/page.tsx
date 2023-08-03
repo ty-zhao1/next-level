@@ -65,7 +65,7 @@ export default function About() {
           animate={textAnimation}
           variants={textAnimationVariants}
         >
-          Hello! My name is Adam, and I'm currently a junior at Stanford University studying computer science.
+          Hello! My name is Adam, and I&apos;m currently a junior at Stanford University studying computer science.
         </motion.p>
         <motion.p
           className="mt-4 text-lg text-gray-500 dark:text-gray-200 text-center"
@@ -73,7 +73,7 @@ export default function About() {
           animate={textAnimation}
           variants={textAnimationVariants}
         >
-          I'm interested in the usage of various computational methods to provide practical, effective solutions for real problems in the world. My work so far has mostly revolved around healthcare, but I'm always looking to apply my knowledge in and learn from other fields.
+          I&apos;m interested in the usage of various computational methods to provide practical, effective solutions for real problems in the world. My work so far has mostly revolved around healthcare, but I&apos;m always looking to apply my knowledge in and learn from other fields.
         </motion.p>
         <motion.p
           className="mt-4 text-lg text-gray-500 dark:text-gray-200 text-center"
