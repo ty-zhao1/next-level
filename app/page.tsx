@@ -4,7 +4,7 @@ import Nav from '../components/Nav';
 
 export default function Home() {
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-12 sm:p-24 bg-blue-50 dark:bg-olive">
+        <main className="flex min-h-screen flex-col items-center justify-between p-12 sm:p-24 bg-blue-100 dark:bg-olive">
             {/* <Nav/> */}
             <div className="relative flex flex-col place-items-center mt-12 sm:mt-24">
                 <h1 className="text-4xl sm:text-7xl text-black dark:text-gray-300">Adam Zhao</h1>
