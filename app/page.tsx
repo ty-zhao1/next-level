@@ -1,11 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link';
 import Nav from '../components/Nav';
+import SphereGrid from "../components/SphereGrid";
 
 export default function Home() {
     return (
         <main className="flex min-h-screen flex-col items-center justify-between p-12 sm:p-24 bg-blue-100 dark:bg-olive">
             {/* <Nav/> */}
+            <SphereGrid/>
             <div className="relative flex flex-col place-items-center mt-12 sm:mt-24">
                 <h1 className="text-4xl sm:text-7xl text-black dark:text-gray-300">Adam Zhao</h1>
                 <p className="text-md sm:text-lg text-gray-700 dark:text-gray-400">Welcome to my website!</p>

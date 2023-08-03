@@ -10,7 +10,7 @@ const experiences = [
     companyName: 'ML Intern @ Pfizer',
     duration: 'Jun 2023 - Present',
     role: 'ML Intern',
-    description: 'Working on a machine learning-based tool to predict viral antigenicity. \
+    description: 'Working on a machine learning-based tool to predict influenza titer values. \
     Potential applications to influenza, COVID-19, and other infectious viruses.\
     ',
     show_role: false,
