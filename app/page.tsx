@@ -9,7 +9,7 @@ export default function Home() {
             {/* <Nav/> */}
             <SphereGrid/>
             <div className="relative flex flex-col place-items-center mt-12 sm:mt-24">
-                <h1 className="text-4xl sm:text-7xl text-black dark:text-gray-300">Adam Zhao</h1>
+                <h1 className="text-4xl sm:text-7xl text-black dark:text-gray-300 font-bold">Adam Zhao</h1>
                 <p className="text-md sm:text-lg text-gray-700 dark:text-gray-400">Welcome to my website!</p>
             </div>
             
@@ -31,7 +31,7 @@ export default function Home() {
                     href="/about"
                     className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-green-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
                 >
-                    <h2 className={`mb-3 text-2xl sm:text-m font-semibold opacity-75`}>
+                    <h2 className={`mb-3 text-4xl sm:text-7xl font-semibold opacity-75`}>
                         About{' '}
                         <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
                             -&gt;
@@ -46,7 +46,7 @@ export default function Home() {
                     href="/exp"
                     className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-pink-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
                 >
-                    <h2 className={`mb-3 text-2xl sm:text-m font-semibold opacity-75`}>
+                    <h2 className={`mb-3 text-4xl sm:text-7xl font-semibold opacity-75`}>
                         Technical{' '}
                         <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
                             -&gt;
@@ -61,7 +61,7 @@ export default function Home() {
                     href="/other"
                     className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-orange-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
                 >
-                    <h2 className={`mb-3 text-2xl sm:text-m font-semibold opacity-75`}>
+                    <h2 className={`mb-3 text-4xl sm:text-7xl font-semibold opacity-75`}>
                         More{' '}
                         <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
                             -&gt;
