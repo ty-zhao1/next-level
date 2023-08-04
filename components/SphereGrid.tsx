@@ -19,13 +19,15 @@ export default function SphereGrid(): JSX.Element {
 
     const screenWidth = window.innerWidth;
     const isSmallScreen = screenWidth < 768;
+    const raycaster = new THREE.Raycaster();
+
 
     const renderer = new THREE.WebGLRenderer({ alpha: true });
     renderer.setSize(width, height);
     containerRef.current.appendChild(renderer.domElement);
 
     const sphereRadius = 0.05; // Twice the original size
-    const sphereCount = 30;  // 20x20 grid
+    const sphereCount = 150;  // 20x20 grid
     const spheres: THREE.Mesh[] = [];
     const geometry = new THREE.SphereGeometry(sphereRadius, 32, 32);
 
@@ -49,32 +51,66 @@ export default function SphereGrid(): JSX.Element {
     const onMouseMove = (e: MouseEvent) => {
         const x = (e.clientX / window.innerWidth) * 2 - 1;
         const y = -(e.clientY / window.innerHeight) * 2 + 1;
+    
+        // Calculate the real-world coordinates from the normalized device coordinates
+        const vector = new THREE.Vector3(x, y, 0.5);  // Z should be 0.5
+        vector.unproject(camera);
+        
+        const dir = vector.sub(camera.position).normalize();
+        const distance = -camera.position.z / dir.z;
+        const pos = camera.position.clone().add(dir.multiplyScalar(distance));
+    
         spheres.forEach((sphere) => {
             sphere.userData.mouseZ = 0; // Reset all spheres
         });
+    
         spheres.forEach((sphere) => {
-          const dx = sphere.position.x - x * 10;
-          const dy = sphere.position.y - y * 10;
+          const dx = sphere.position.x - pos.x;
+          const dy = sphere.position.y - pos.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          //const forceMultiplier = isSmallScreen ? 0.75 : 1.5;
           const force = Math.max(0, (1 - dist / 2) * 1.5);
           if (force > 0.1) {  // Apply the effect only if the force is significant
             sphere.userData.mouseZ = force;
-        }
-        //   sphere.userData.mouseZ = force;
+          }
         });
-      };
+    };
+    
+      
+      
 
-      const onTouchMove = (event: TouchEvent) => {
-        // Ensure you're accessing touch event properties correctly
+    const onTouchMove = (event: TouchEvent) => {
         if (event.touches.length > 0) {
             const touch = event.touches[0];
-            onMouseMove({
-                clientX: touch.clientX,
-                clientY: touch.clientY
-            } as MouseEvent); // We're reusing the onMouseMove function by passing in the touch event properties in the format it expects.
+            const x = (touch.clientX / window.innerWidth) * 2 - 1;
+            const y = -(touch.clientY / window.innerHeight) * 2 + 1;
+    
+            // Calculate the real-world coordinates from the normalized device coordinates
+            const vector = new THREE.Vector3(x, y, 0.5);  // Z should be 0.5
+            vector.unproject(camera);
+            
+            const dir = vector.sub(camera.position).normalize();
+            const distance = -camera.position.z / dir.z;
+            const pos = camera.position.clone().add(dir.multiplyScalar(distance));
+            
+            spheres.forEach((sphere) => {
+              sphere.userData.mouseZ = 0; // Reset all spheres
+            });
+      
+            spheres.forEach((sphere) => {
+              const dx = sphere.position.x - pos.x;
+              const dy = sphere.position.y - pos.y;
+              const dist = Math.sqrt(dx * dx + dy * dy);
+              const force = Math.max(0, (1 - dist / 2) * 1.5);
+      
+              if (force > 0.1) {  // Apply the effect only if the force is significant
+                sphere.userData.mouseZ = force;
+              }
+            });
         }
     };
+    
+    
+      
       
       const animate = () => {
         requestAnimationFrame(animate);
