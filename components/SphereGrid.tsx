@@ -95,8 +95,8 @@ export default function SphereGrid(): JSX.Element {
     animate();
 
     return () => {
-      window.removeEventListener('mousemove', onMouseMove);
-      document.addEventListener("touchmove", onTouchMove);
+      document.removeEventListener('mousemove', onMouseMove);
+      document.removeEventListener("touchmove", onTouchMove);
       spheres.forEach((sphere) => scene.remove(sphere));
       renderer.dispose();
     };
