@@ -35,7 +35,7 @@ export default function Home() {
         return (
             <Link
                 key={index}
-                href={`${item.link}}`}
+                href={`${item.link}`}
                 className={`group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-${item.color}-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 w-full lg:w-[220px] flex flex-col items-center`}
             >
                 <div className="flex items-center justify-center w-full space-x-2">
