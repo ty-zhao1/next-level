@@ -39,7 +39,7 @@ export default function Home() {
                 {[
                     { title: "About", description: "An intro to me.", color: "green", link: "/about" },
                     { title: "Technical", description: "Technical background.", color: "pink", link: "/exp" },
-                    { title: "More", description: "Non-technical tidbits.", color: "orange", link: "/other" }
+                    { title: "More", description: "Other tidbits.", color: "orange", link: "/other" }
                 ].map((item, index) => {
                     return (
                         <Link

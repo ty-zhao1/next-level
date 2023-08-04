@@ -81,7 +81,7 @@ export default function About() {
           animate={textAnimation}
           variants={textAnimationVariants}
         >
-          Outside of tech, I am a dedicated classical musician, having played cello for over 12 years. I also enjoy weightlifting, photography, and trying delicious food.
+          Outside of tech, I am a dedicated classical musician, minoring in music and playing on Stanford Orchestra and my chamber groups. I also enjoy weightlifting, photography, and trying delicious food.
         </motion.p>
         <motion.p
           className="mt-4 text-lg text-gray-500 dark:text-gray-200 text-center"
