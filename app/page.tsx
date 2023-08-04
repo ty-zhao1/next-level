@@ -37,7 +37,7 @@ export default function Home() {
                             -&gt;
                         </span>
                     </h2>
-                    <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+                    <p className={`m-0 max-w-[30ch] text-sm sm:text-xs opacity-50`}>
                         An intro to me.
                     </p>
                 </Link>
@@ -52,7 +52,7 @@ export default function Home() {
                             -&gt;
                         </span>
                     </h2>
-                    <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+                    <p className={`m-0 max-w-[30ch] text-sm sm:text-xs opacity-50`}>
                         Technical background.
                     </p>
                 </Link>
@@ -67,7 +67,7 @@ export default function Home() {
                             -&gt;
                         </span>
                     </h2>
-                    <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+                    <p className={`m-0 max-w-[30ch] lg:text-sm sm:text-xs opacity-50`}>
                         Non-technical tidbits.
                     </p>
                 </Link>
