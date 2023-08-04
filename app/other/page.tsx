@@ -101,7 +101,7 @@ export default function Other() {
             animate="visible"
             variants={contentVariants}
           >
-                     I&apos;m a clasically trained cellist with over 12 years of experience. I&apos;ve been in various orchestras, chamber groups and other ensembles, playing pieces by Beethoven, Mozart, Tchaikovsky, and many more.
+                     I&apos;m a classically trained cellist with over 12 years of experience. I&apos;ve been in various orchestras, chamber groups and other ensembles, playing pieces by Beethoven, Mozart, Tchaikovsky, and many more.
          I&apos;m currently a member of the Stanford Symphony Orchestra, and am open to playing gigs and other events.
           </motion.p>
         </div>
