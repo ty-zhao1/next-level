@@ -30,18 +30,18 @@ export default function Home() {
     {["About", "Technical", "More things"].map((title, index) => {
         const descriptions = ["An intro to me.", "Technical background.", "Non-technical tidbits."];
         const colors = ["green", "pink", "orange"];
-        
+        const link = ["/about", "/exp", "/other"]
         return (
             <Link
                 key={index}
-                href={`/${title.toLowerCase()}`}
+                href={link[index]}
                 className={`group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-${colors[index]}-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 w-full lg:w-[220px] flex flex-col items-center`}
             >
                 <div className="flex items-center justify-center w-full space-x-2">
                     <h2 className={`font-semibold opacity-75 text-xs lg:text-2xl`}>
                         {title}
                     </h2>
-                    <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                    <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none whitespace-nowrap">
                         -&gt;
                     </span>
                 </div>
