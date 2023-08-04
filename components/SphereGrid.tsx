@@ -17,6 +17,9 @@ export default function SphereGrid(): JSX.Element {
     const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
     camera.position.z = 5;
 
+    const screenWidth = window.innerWidth;
+    const isSmallScreen = screenWidth < 768;
+
     const renderer = new THREE.WebGLRenderer({ alpha: true });
     renderer.setSize(width, height);
     containerRef.current.appendChild(renderer.domElement);
@@ -53,6 +56,7 @@ export default function SphereGrid(): JSX.Element {
           const dx = sphere.position.x - x * 10;
           const dy = sphere.position.y - y * 10;
           const dist = Math.sqrt(dx * dx + dy * dy);
+          //const forceMultiplier = isSmallScreen ? 0.75 : 1.5;
           const force = Math.max(0, (1 - dist / 2) * 1.5);
           if (force > 0.1) {  // Apply the effect only if the force is significant
             sphere.userData.mouseZ = force;
@@ -79,7 +83,8 @@ export default function SphereGrid(): JSX.Element {
     
         spheres.forEach((sphere) => {
             const rippleEffect = Math.sin(sphere.position.x + time) + Math.sin(sphere.position.y + time);
-            sphere.position.z = rippleEffect * 0.1 + (sphere.userData.mouseZ || 0);
+            const rippleMult = isSmallScreen ? 0.2 : 0.1;
+            sphere.position.z = rippleEffect * rippleMult + (sphere.userData.mouseZ || 0);
             //sphere.userData.mouseZ *= 0.9;
         });
     

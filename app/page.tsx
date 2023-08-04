@@ -26,7 +26,7 @@ export default function Home() {
                 </div>
             </div>
             
-            <div className="gap-x-6 sm:gap-x-12 grid text-center lg:mb-0 lg:grid-cols-3 lg:text-left">
+            <div className="gap-x-6 sm:gap-x-12 grid text-center lg:mb-0 grid-cols-3 lg:text-left">
             <Link
                     href="/about"
                     className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-green-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
