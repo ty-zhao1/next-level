@@ -26,8 +26,8 @@ export default function SphereGrid(): JSX.Element {
         renderer.setSize(width, height);
         containerRef.current.appendChild(renderer.domElement);
 
-        const sphereRadius = 0.05; // Twice the original size
-        const sphereCount = 50;  // 20x20 grid
+        const sphereRadius = 0.04; // Twice the original size
+        const sphereCount = 40;  // 20x20 grid
         const spheres: THREE.Mesh[] = [];
         const geometry = new THREE.SphereGeometry(sphereRadius, 32, 32);
 
@@ -35,33 +35,33 @@ export default function SphereGrid(): JSX.Element {
         const sphereColor = isDarkMode ? 0x8db3a0 : 0xbfdbfe; // replace 0xabcdef with the desired color for dark mode
 
         const material = new THREE.MeshBasicMaterial({ color: sphereColor });
-        const spacing = 0.5; // Less than 1 will make the spacing tighter, adjust to your liking
+        const spacing = 0.4; // Less than 1 will make the spacing tighter, adjust to your liking
 
         const fragmentShader = `
-  varying vec3 vUv;
+            varying vec3 vUv;
 
-  vec3 hsl2rgb(float h, float s, float l){
-    vec3 rgb = clamp(abs(mod(h*6.0+vec3(0.0,4.0,2.0),6.0)-3.0)-1.0,0.0,1.0);
-    rgb = l - l * s + s * rgb; // Luminance
-    return rgb;
-  }
+            vec3 hsl2rgb(float h, float s, float l){
+                vec3 rgb = clamp(abs(mod(h*6.0+vec3(0.0,4.0,2.0),6.0)-3.0)-1.0,0.0,1.0);
+                rgb = l - l * s + s * rgb; // Luminance
+                return rgb;
+            }
 
-  void main() {
-    float h = atan(vUv.y, vUv.x) / (2.0 * 3.14159265) + 0.5; // Convert Cartesian to polar coordinates (range [-pi, pi] -> [0, 1] for hue)
-    vec3 color = hsl2rgb(h, 1.0, 0.5); // Full saturation, half luminance
-    gl_FragColor = vec4(color, 1.0);
-  }
-`;
+            void main() {
+                float h = atan(vUv.y, vUv.x) / (2.0 * 3.14159265) + 0.5; // Convert Cartesian to polar coordinates (range [-pi, pi] -> [0, 1] for hue)
+                vec3 color = hsl2rgb(h, 1.0, 0.5); // Full saturation, half luminance
+                gl_FragColor = vec4(color, 1.0);
+            }
+            `;
 
 
 
-const vertexShader = `
-  varying vec3 vUv; 
-  void main() {
-    vUv = position; 
-    gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0);
-  }
-`;
+        const vertexShader = `
+        varying vec3 vUv; 
+        void main() {
+            vUv = position; 
+            gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0);
+        }
+        `;
 
 
         for (let i = -sphereCount / 2; i <= sphereCount / 2; i++) {
@@ -120,9 +120,6 @@ const vertexShader = `
                 }
             });
         };
-
-
-
 
         const onTouchMove = (event: TouchEvent) => {
             if (event.touches.length > 0) {
