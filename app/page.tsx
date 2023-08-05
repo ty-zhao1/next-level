@@ -9,22 +9,11 @@ export default function Home() {
             {/* <Nav/> */}
             <SphereGrid />
             <div className="relative flex flex-col place-items-center mt-12 sm:mt-24">
-                <h1 className="text-4xl sm:text-7xl text-black dark:text-gray-300 font-bold">Adam Zhao</h1>
-                <p className="text-md sm:text-lg text-gray-700 dark:text-gray-400">Welcome to my website!</p>
+                <h1 className="text-4xl sm:text-7xl text-white font-bold">Adam Zhao</h1>
+                <p className="text-md sm:text-lg text-gray-300 dark:text-gray-400">Welcome to my website!</p>
             </div>
 
-            {/* Sun and Moon container */}
-            <div className="flex justify-center mt-4 sm:mt-8 mb-8 sm:mb-16 scale-50 sm:scale-100">
-                {/* Sun Image for Light Mode */}
-                <div className="dark:hidden z-0">
-                    <Image src="/sun.svg" alt="SVG in Light Mode" width="150" height="150" />
-                </div>
-
-                {/* Moon Image for Dark Mode */}
-                <div className="hidden dark:block z-0">
-                    <Image src="/moon.svg" alt="Moon in Dark Mode" width={75} height={75} />
-                </div>
-            </div>
+            
             {/* <Link href="/about">
   <div className="group rounded-lg border px-5 py-4 transition-colors hover:border-gray-300 hover:bg-green-100">
     <h2 className="mb-3 text-xl font-semibold opacity-75">
@@ -45,19 +34,19 @@ export default function Home() {
                         <Link
                             key={index}
                             href={`${item.link}`}
-                            className={`group rounded-lg border border-transparent px-5 py-4 transition-colors w-full lg:w-[220px] flex flex-col items-center hover:border-gray-300 hover:dark:border-neutral-700 ${item.color === 'green' ? 'hover:bg-green-100' : item.color === 'pink' ? 'hover:bg-pink-100' : 'hover:bg-orange-100'} hover:dark:bg-neutral-800/30`}
+                            className={`group rounded-lg border border-transparent px-5 py-4 transition-colors w-full lg:w-[220px] flex flex-col items-center hover:border-gray-300 hover:border-white hover:bg-neutral-800/30`}
                         >
                             <div className="flex items-center justify-center w-full space-x-2">
-                                <h2 className={`font-semibold opacity-75 text-xs lg:text-2xl`}>
+                                <h2 className={`font-semibold opacity-80 text-xs lg:text-2xl`}>
                                     {item.title}
                                 </h2>
                                 <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none whitespace-nowrap">
                                     -&gt;
                                 </span>
                             </div>
-                            <p className={`m-0 max-w-[30ch] text-xs opacity-50 whitespace-nowrap`}>
+                            {/* <p className={`m-0 max-w-[30ch] text-xs opacity-50`}>
                                 {item.description}
-                            </p>
+                            </p> */}
                         </Link>
                     );
                 })}
@@ -66,3 +55,17 @@ export default function Home() {
         </main>
     )
 }
+
+
+// {/* Sun and Moon container */}
+// <div className="flex justify-center mt-4 sm:mt-8 mb-8 sm:mb-16 scale-50 sm:scale-100">
+// {/* Sun Image for Light Mode */}
+// <div className="dark:hidden z-0">
+//     <Image src="/sun.svg" alt="SVG in Light Mode" width="150" height="150" />
+// </div>
+
+// {/* Moon Image for Dark Mode */}
+// <div className="hidden dark:block z-0">
+//     <Image src="/moon.svg" alt="Moon in Dark Mode" width={75} height={75} />
+// </div>
+// </div>
