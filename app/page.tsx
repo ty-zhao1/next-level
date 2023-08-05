@@ -55,7 +55,7 @@ export default function Home() {
                                     -&gt;
                                 </span>
                             </div>
-                            <p className={`m-0 max-w-[30ch] text-xs opacity-50`}>
+                            <p className={`m-0 max-w-[30ch] text-xs opacity-50 whitespace-nowrap`}>
                                 {item.description}
                             </p>
                         </Link>

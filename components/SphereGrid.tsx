@@ -9,6 +9,8 @@ export default function SphereGrid(): JSX.Element {
 
     useEffect(() => {
         if (!containerRef.current) return;
+        
+        let animationId: number;
 
         const width = containerRef.current.clientWidth;
         const height = containerRef.current.clientHeight;
@@ -156,14 +158,14 @@ export default function SphereGrid(): JSX.Element {
 
 
         const animate = () => {
-            requestAnimationFrame(animate);
-
+            animationId = requestAnimationFrame(animate);
+            // requestAnimationFrame(animate);
             time += 0.02;
 
             spheres.forEach((sphere) => {
                 const rippleEffect = Math.sin(sphere.position.x + time) + Math.sin(sphere.position.y + time);
                 const rippleMult = isSmallScreen ? 0.2 : 0.1;
-                sphere.position.z = rippleEffect * rippleMult + (sphere.userData.mouseZ || 0);
+                sphere.position.z = rippleEffect * 0.2 + (sphere.userData.mouseZ || 0);
                 //sphere.userData.mouseZ *= 0.9;
             });
 
@@ -174,6 +176,7 @@ export default function SphereGrid(): JSX.Element {
         animate();
 
         return () => {
+            cancelAnimationFrame(animationId);
             document.removeEventListener('mousemove', onMouseMove);
             document.removeEventListener("touchmove", onTouchMove);
             spheres.forEach((sphere) => scene.remove(sphere));
