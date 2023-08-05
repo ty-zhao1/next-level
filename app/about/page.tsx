@@ -32,11 +32,11 @@ export default function About() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-green-50 dark:bg-gray-700">
+    <div className="min-h-screen bg-gray-700">
       <Nav />
       <div className="px-4 py-12 max-w-md mx-auto sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
         <motion.h2
-          className="text-4xl font-extrabold text-black dark:text-gray-200 text-center"
+          className="text-4xl font-extrabold text-gray-200 text-center"
           initial="hidden"
           animate={headerAnimation}
           variants={headerAnimationVariants}
@@ -58,9 +58,9 @@ export default function About() {
             />
           </motion.div>
         </div>
-        <hr className="my-8 border-gray-300 dark:border-gray-200" />
+        <hr className="my-8 border-gray-200" />
         <motion.p
-          className="mt-4 text-lg text-gray-500 dark:text-gray-200 text-center"
+          className="mt-4 text-lg text-gray-200 text-center"
           initial="hidden"
           animate={textAnimation}
           variants={textAnimationVariants}
@@ -68,7 +68,7 @@ export default function About() {
           Hello! My name is Adam, and I&apos;m currently a junior at Stanford University studying computer science.
         </motion.p>
         <motion.p
-          className="mt-4 text-lg text-gray-500 dark:text-gray-200 text-center"
+          className="mt-4 text-lg text-gray-200 text-center"
           initial="hidden"
           animate={textAnimation}
           variants={textAnimationVariants}
@@ -76,7 +76,7 @@ export default function About() {
           I&apos;m interested in the usage of various computational methods to provide practical, effective solutions for real problems in the world. My work so far has mostly revolved around healthcare, but I&apos;m always looking to apply my knowledge in and learn from other fields.
         </motion.p>
         <motion.p
-          className="mt-4 text-lg text-gray-500 dark:text-gray-200 text-center"
+          className="mt-4 text-lg text-gray-200 text-center"
           initial="hidden"
           animate={textAnimation}
           variants={textAnimationVariants}
@@ -84,7 +84,7 @@ export default function About() {
           Outside of tech, I am a dedicated classical musician, minoring in music and playing on Stanford Orchestra and my chamber groups. I also enjoy weightlifting, photography, and trying delicious food.
         </motion.p>
         <motion.p
-          className="mt-4 text-lg text-gray-500 dark:text-gray-200 text-center"
+          className="mt-4 text-lg text-gray-200 text-center"
           initial="hidden"
           animate={textAnimation}
           variants={textAnimationVariants}

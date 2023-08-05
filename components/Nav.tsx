@@ -25,7 +25,7 @@ export default function Nav() {
         const { symbol, translate } = arrowDirection(path);
         return (
           <Link key={path} href={path}>
-            <div className={`group rounded-lg border border-transparent px-3 sm:px-5 py-3 sm:py-4 transition-colors hover:border-gray-300 hover:${color} dark:hover:bg-gray-400 text-gray-900 dark:text-gray-200 whitespace-nowrap text-sm sm:text-base`}>
+            <div className={`group rounded-lg border border-transparent px-3 sm:px-5 py-3 sm:py-4 transition-colors hover:border-gray-300 hover:bg-gray-400 text-gray-200 whitespace-nowrap text-sm sm:text-base`}>
               {symbol.startsWith('<') && <span className={`inline-block transition-transform ${translate} motion-reduce:transform-none`}>{symbol}</span>}
               {label}
               {symbol.endsWith('>') && <span className={`inline-block transition-transform ${translate} motion-reduce:transform-none`}>{symbol}</span>}

@@ -56,13 +56,13 @@ const experiences = [
 ];
 export default function Exp() {
   return (
-    <div className="min-h-screen bg-pink-50 dark:bg-gray-700">
+    <div className="min-h-screen bg-gray-700">
       <Nav />
       <div className="px-4 py-4 max-w-md mx-auto sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
-        <h2 className="text-4xl font-extrabold text-black dark:text-gray-100">
+        <h2 className="text-4xl font-extrabold text-gray-100">
           Technical
         </h2>
-        <p className="mt-4 text-lg text-gray-500 dark:text-gray-300">
+        <p className="mt-4 text-lg text-gray-300">
           Here are a few of my past experiences and projects.
         </p>
         {experiences.map((experience) => (
@@ -88,11 +88,11 @@ export default function Exp() {
             {/* Text animation from the right */}
             <motion.div initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} className="flex-1">
               <div className="text-left w-full">
-                <h3 className="text-2xl font-semibold dark:text-gray-200">{experience.companyName}</h3>
-                <p className="mt-2 text-gray-500 dark:text-gray-300">
+                <h3 className="text-2xl font-semibold text-gray-200">{experience.companyName}</h3>
+                <p className="mt-2 text-gray-400">
                   {experience.show_role ? `${experience.duration} | ${experience.role}` : experience.duration}
                 </p>
-                <p className="mt-2 text-lg text-gray-500 dark:text-gray-200">
+                <p className="mt-2 text-lg text-gray-300">
                   {experience.description}
                 </p>
               </div>
