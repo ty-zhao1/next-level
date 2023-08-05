@@ -5,7 +5,7 @@ import SphereGrid from "../components/SphereGrid";
 
 export default function Home() {
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-12 sm:p-24 bg-blue-100 dark:bg-olive">
+        <main className="flex min-h-screen flex-col items-center justify-between p-12 sm:p-24 bg-blue-100 dark:bg-black">
             {/* <Nav/> */}
             <SphereGrid />
             <div className="relative flex flex-col place-items-center mt-12 sm:mt-24">
