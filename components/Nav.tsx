@@ -20,7 +20,7 @@ export default function Nav() {
         { path: "/", label: "Home", color: "bg-blue-200" },
         { path: "/about", label: "About", color: "bg-green-100" },
         { path: "/exp", label: "Technical", color: "bg-pink-100" },
-        { path: "/other", label: "Other", color: "bg-orange-100" }
+        { path: "/other", label: "More", color: "bg-orange-100" }
       ].map(({ path, label, color }) => {
         const { symbol, translate } = arrowDirection(path);
         return (
