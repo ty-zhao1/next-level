@@ -1,4 +1,3 @@
-// components/SphereGrid.tsx
 'use client'
 import * as THREE from "three";
 import React, { useEffect, useRef } from "react";

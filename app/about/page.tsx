@@ -93,6 +93,26 @@ export default function About() {
             adamzhao@stanford.edu
             </a>
         </motion.p>
+        <motion.p
+          className="mt-4 text-lg text-gray-200 text-center"
+          initial="hidden"
+          animate={textAnimation}
+          variants={textAnimationVariants}
+        >
+          Here is my <a className="text-blue-500 hover:text-blue-600" href="https://www.linkedin.com/in/zhao1adam/" target="_blank">
+            LinkedIn
+            </a>
+        </motion.p>
+        <motion.p
+          className="mt-4 text-lg text-gray-200 text-center"
+          initial="hidden"
+          animate={textAnimation}
+          variants={textAnimationVariants}
+        >
+          Here is my <a className="text-blue-500 hover:text-blue-600" href="https://github.com/ty-zhao" target="_blank">
+            Github
+            </a>
+        </motion.p>
       </div>
     </div>
   );
