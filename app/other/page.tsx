@@ -52,6 +52,28 @@ export default function Other() {
           Hobbies
         </motion.h2>
 
+        <div className="mt-16">
+          <motion.h3 
+            className="text-2xl font-bold text-white"
+            initial="hidden"
+            animate="visible"
+            variants={headerVariants}
+          >
+            Cello
+          </motion.h3>
+
+          <motion.p 
+            className="mt-4 text-lg text-gray-200"
+            initial="hidden"
+            animate="visible"
+            variants={contentVariants}
+          >
+                     I&apos;m a classically trained cellist with over 12 years of experience. I&apos;ve been in various orchestras, chamber groups and other ensembles, playing pieces by Beethoven, Mozart, Tchaikovsky, and many more.
+         I&apos;m currently a member of the Stanford Symphony Orchestra, and am open to playing gigs and other events.
+          </motion.p>
+        </div>
+
+
         <div className="mt-8">
           <motion.h3 
             className="text-2xl font-bold text-white"
@@ -83,27 +105,6 @@ export default function Other() {
               ))}
             </div>
           </motion.div>
-        </div>
-
-        <div className="mt-16">
-          <motion.h3 
-            className="text-2xl font-bold text-white"
-            initial="hidden"
-            animate="visible"
-            variants={headerVariants}
-          >
-            Cello
-          </motion.h3>
-
-          <motion.p 
-            className="mt-4 text-lg text-gray-200"
-            initial="hidden"
-            animate="visible"
-            variants={contentVariants}
-          >
-                     I&apos;m a classically trained cellist with over 12 years of experience. I&apos;ve been in various orchestras, chamber groups and other ensembles, playing pieces by Beethoven, Mozart, Tchaikovsky, and many more.
-         I&apos;m currently a member of the Stanford Symphony Orchestra, and am open to playing gigs and other events.
-          </motion.p>
         </div>
 
         <div className="mt-16">

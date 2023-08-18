@@ -92,8 +92,12 @@ export default function About() {
           Feel free to reach out to me at <a className="text-blue-500 hover:text-blue-600" href="mailto:adamzhao@stanford.edu" target="_blank">
             adamzhao@stanford.edu
             </a>
+            , or my&nbsp;
+              <a className="text-blue-500 hover:text-blue-600" href="https://www.linkedin.com/in/zhao1adam/" target="_blank">
+              LinkedIn
+              </a>
         </motion.p>
-        <motion.p
+        {/* <motion.p
           className="mt-4 text-lg text-gray-200 text-center"
           initial="hidden"
           animate={textAnimation}
@@ -112,7 +116,7 @@ export default function About() {
           Here is my <a className="text-blue-500 hover:text-blue-600" href="https://github.com/ty-zhao" target="_blank">
             Github
             </a>
-        </motion.p>
+        </motion.p> */}
       </div>
     </div>
   );
