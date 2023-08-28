@@ -40,11 +40,11 @@ const photos: Photo[] = [
 
 export default function Other() {
   return (
-    <div className="min-h-screen bg-orange-50 dark:bg-gray-700">
+    <div className="min-h-screen bg-gray-700">
       <Nav />
       <div className="px-4 py-4 max-w-md mx-auto sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
         <motion.h2 
-          className="text-4xl font-extrabold text-black dark:text-gray-100"
+          className="text-4xl font-extrabold text-gray-100"
           initial="hidden"
           animate="visible"
           variants={headerVariants}
@@ -52,9 +52,31 @@ export default function Other() {
           Hobbies
         </motion.h2>
 
+        <div className="mt-16">
+          <motion.h3 
+            className="text-2xl font-bold text-white"
+            initial="hidden"
+            animate="visible"
+            variants={headerVariants}
+          >
+            Cello
+          </motion.h3>
+
+          <motion.p 
+            className="mt-4 text-lg text-gray-200"
+            initial="hidden"
+            animate="visible"
+            variants={contentVariants}
+          >
+                     I&apos;m a classically trained cellist with over 12 years of experience. I&apos;ve been in various orchestras, chamber groups and other ensembles, playing pieces by Beethoven, Mozart, Tchaikovsky, and many more.
+         I&apos;m currently a member of the Stanford Symphony Orchestra, and am open to playing gigs and other events.
+          </motion.p>
+        </div>
+
+
         <div className="mt-8">
           <motion.h3 
-            className="text-2xl font-bold text-black dark:text-white"
+            className="text-2xl font-bold text-white"
             initial="hidden"
             animate="visible"
             variants={headerVariants}
@@ -67,7 +89,7 @@ export default function Other() {
             animate="visible"
             variants={contentVariants}
           >
-            <p className="mt-2 text-lg text-gray-500 dark:text-gray-200">
+            <p className="mt-2 text-lg text-gray-200">
             I&apos;ve taken an interest in photography, specifically clouds and landscape. Here are some of my favorite photos I&apos;ve taken. Feel free to scroll left and right.
             </p>
             <div className="flex overflow-x-auto space-x-4 mt-4">
@@ -87,28 +109,7 @@ export default function Other() {
 
         <div className="mt-16">
           <motion.h3 
-            className="text-2xl font-bold text-black dark:text-white"
-            initial="hidden"
-            animate="visible"
-            variants={headerVariants}
-          >
-            Cello
-          </motion.h3>
-
-          <motion.p 
-            className="mt-4 text-lg text-gray-500 dark:text-gray-200"
-            initial="hidden"
-            animate="visible"
-            variants={contentVariants}
-          >
-                     I&apos;m a classically trained cellist with over 12 years of experience. I&apos;ve been in various orchestras, chamber groups and other ensembles, playing pieces by Beethoven, Mozart, Tchaikovsky, and many more.
-         I&apos;m currently a member of the Stanford Symphony Orchestra, and am open to playing gigs and other events.
-          </motion.p>
-        </div>
-
-        <div className="mt-16">
-          <motion.h3 
-            className="text-2xl font-bold text-black dark:text-white"
+            className="text-2xl font-bold text-white"
             initial="hidden"
             animate="visible"
             variants={headerVariants}
@@ -117,7 +118,7 @@ export default function Other() {
           </motion.h3>
 
           <motion.p 
-            className="mt-4 text-lg text-gray-500 dark:text-gray-200"
+            className="mt-4 text-lg text-gray-200"
             initial="hidden"
             animate="visible"
             variants={contentVariants}
