@@ -12,18 +12,6 @@ export default function Home() {
                 <h1 className="text-4xl sm:text-7xl text-white font-bold">Adam Zhao</h1>
                 <p className="text-md sm:text-lg text-gray-200">Welcome to my website!</p>
             </div>
-
-            
-            {/* <Link href="/about">
-  <div className="group rounded-lg border px-5 py-4 transition-colors hover:border-gray-300 hover:bg-green-100">
-    <h2 className="mb-3 text-xl font-semibold opacity-75">
-      About
-    </h2>
-    <p className="m-0 text-sm opacity-50">
-      An intro to me.
-    </p>
-  </div>
-</Link> */}
             <div className="gap-6 sm:gap-12 grid text-center lg:mb-0 grid-cols-3 lg:text-left">
                 {[
                     { title: "About", description: "An intro to me.", color: "green", link: "/about" },
@@ -55,17 +43,3 @@ export default function Home() {
         </main>
     )
 }
-
-
-// {/* Sun and Moon container */}
-// <div className="flex justify-center mt-4 sm:mt-8 mb-8 sm:mb-16 scale-50 sm:scale-100">
-// {/* Sun Image for Light Mode */}
-// <div className="dark:hidden z-0">
-//     <Image src="/sun.svg" alt="SVG in Light Mode" width="150" height="150" />
-// </div>
-
-// {/* Moon Image for Dark Mode */}
-// <div className="hidden dark:block z-0">
-//     <Image src="/moon.svg" alt="Moon in Dark Mode" width={75} height={75} />
-// </div>
-// </div>

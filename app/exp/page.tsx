@@ -24,7 +24,6 @@ const experiences = [
     description: 'Currently building a predictive model used by Stanford Medical School for the severity of hepatic encephalopathy based on patient health records.',
     show_role: false,
   },
-  // Add more experiences as needed
   {
     id: 3,
     logoSrc: '/nextlogo.png',
