@@ -6,9 +6,19 @@ import { motion } from 'framer-motion';
 const experiences = [
   {
     id: 1,
+    logoSrc: '/Adobe.png',
+    companyName: 'Machine Learning Engineer Intern @ Adobe',
+    duration: 'Jun 2024 - Present',
+    role: 'ML Intern',
+    description: 'Developing LLM tools which automatically generate SQL queries to aid in table validation as part of a data migration.',
+    show_role: false,
+  },
+  ,
+  {
+    id: 1,
     logoSrc: '/pfizer2.png',
-    companyName: 'ML Intern @ Pfizer',
-    duration: 'Jun 2023 - Present',
+    companyName: 'Machine Learning Engineer Intern @ Pfizer',
+    duration: 'Jun 2023 - Sep 2023',
     role: 'ML Intern',
     description: 'Working on a machine learning-based tool to predict influenza titer values. \
     Potential applications to influenza, COVID-19, and other infectious viruses.\
