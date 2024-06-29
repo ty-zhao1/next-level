@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const experiences = [
   {
-    id: 1,
+    id: 0,
     logoSrc: '/Adobe.png',
     companyName: 'Machine Learning Engineer Intern @ Adobe',
     duration: 'Jun 2024 - Present',
@@ -53,7 +53,7 @@ const experiences = [
     show_role: false,
   },
   {
-    id: 4,
+    id: 5,
     logoSrc: '/guitarhero.png',
     companyName: 'Guitar Hero in C using Raspberry Pi, Arduino',
     duration: 'Oct 2022 - Dec 2022',
@@ -76,7 +76,7 @@ export default function Exp() {
         </p>
         {experiences.map((experience) => (
           <motion.div
-            key={experience.id}
+            key={experience!.id}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
@@ -86,8 +86,8 @@ export default function Exp() {
             <motion.div initial={{ opacity: 0, x: -100 }} animate={{ opacity: 1, x: 0 }} className="mr-4 flex flex-col justify-center">
               <div className="w-48 h-48 rounded-md overflow-hidden">
                 <Image
-                  src={experience.logoSrc}
-                  alt={`${experience.companyName} Logo`}
+                  src={experience!.logoSrc}
+                  alt={`${experience!.companyName} Logo`}
                   width={200}
                   height={200}
                 />
@@ -97,12 +97,12 @@ export default function Exp() {
             {/* Text animation from the right */}
             <motion.div initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} className="flex-1">
               <div className="text-left w-full">
-                <h3 className="text-2xl font-semibold text-gray-200">{experience.companyName}</h3>
+                <h3 className="text-2xl font-semibold text-gray-200">{experience!.companyName}</h3>
                 <p className="mt-2 text-gray-400">
-                  {experience.show_role ? `${experience.duration} | ${experience.role}` : experience.duration}
+                  {experience && experience.show_role ? `${experience.duration} | ${experience.role}` : experience!.duration}
                 </p>
                 <p className="mt-2 text-lg text-gray-300">
-                  {experience.description}
+                  {experience!.description}
                 </p>
               </div>
             </motion.div>
