@@ -51,7 +51,7 @@ export default function About() {
             variants={textAnimationVariants}
           >
             <Image
-              src="/about_headshot.jpg" // path to your photo
+              src="/DSC02305 copy.jpg" // path to your photo
               alt="Your Photo"
               width={192} // adjust the width of the image
               height={192} // adjust the height of the image
