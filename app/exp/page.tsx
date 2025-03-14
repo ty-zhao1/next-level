@@ -7,9 +7,9 @@ const experiences = [
   {
     id: 0,
     logoSrc: '/Adobe.png',
-    companyName: 'Machine Learning Engineer Intern @ Adobe',
+    companyName: 'Software Engineer Intern @ Adobe',
     duration: 'Jun 2024 - Present',
-    role: 'ML Intern',
+    role: 'SWE Intern',
     description: 'Developing LLM tools which automatically generate SQL queries to aid in table validation as part of a data migration.',
     show_role: false,
   },
@@ -28,40 +28,40 @@ const experiences = [
   {
     id: 2,
     logoSrc: '/gastro.png',
-    companyName: 'Researcher @ Stanford',
-    duration: 'Jan 2023 - Present',
+    companyName: 'Developer @ Stanford',
+    duration: 'Jan 2023 - Jun 2024',
     role: 'Researcher',
     description: 'Currently building a predictive model used by Stanford Medical School for the severity of hepatic encephalopathy based on patient health records.',
     show_role: false,
   },
-  {
-    id: 3,
-    logoSrc: '/nextlogo.png',
-    companyName: 'Personal Website',
-    duration: 'Jun 2023 - Present',
-    role: 'Software Engineer',
-    description: 'Designed and built my personal website in TypeScript using Next.js, Three.js, and Tailwind CSS. This website is a work in progress.',
-    show_role: false,
-  },
-  {
-    id: 4,
-    logoSrc: '/pokemon.png',
-    companyName: 'AlphaGogoat: Reinforcement Learning for Pokemon Battles',
-    duration: 'Mar 2023 - Jun 2023',
-    role: 'Software Engineer',
-    description: 'Programmed a Reinforcement Learning Agent in a team of 2 that played Pokémon in real time on the Pokémon Showdown battle simulator.',
-    show_role: false,
-  },
-  {
-    id: 5,
-    logoSrc: '/guitarhero.png',
-    companyName: 'Guitar Hero in C using Raspberry Pi, Arduino',
-    duration: 'Oct 2022 - Dec 2022',
-    role: 'Software Engineer',
-    description: 'Coded Guitar Hero video game in a team of 3 from scratch using Arduino and Raspberry Pi\'s.\
-    Processed i/o from guitar controller and Arduino, used wireless transmitters for guitar controller and Fast Fourier Transform to process notes.',
-    show_role: false,
-  },
+  // {
+  //   id: 3,
+  //   logoSrc: '/nextlogo.png',
+  //   companyName: 'Personal Website',
+  //   duration: 'Jun 2023 - Present',
+  //   role: 'Software Engineer',
+  //   description: 'Designed and built my personal website in TypeScript using Next.js, Three.js, and Tailwind CSS. This website is a work in progress.',
+  //   show_role: false,
+  // },
+  // {
+  //   id: 3,
+  //   logoSrc: '/pokemon.png',
+  //   companyName: 'AlphaGogoat: Reinforcement Learning for Pokemon Battles',
+  //   duration: 'Mar 2023 - Jun 2023',
+  //   role: 'Software Engineer',
+  //   description: 'Programmed a Reinforcement Learning Agent in a team of 2 that played Pokémon in real time on the Pokémon Showdown battle simulator.',
+  //   show_role: false,
+  // },
+  // {
+  //   id: 4,
+  //   logoSrc: '/guitarhero.png',
+  //   companyName: 'Guitar Hero in C using Raspberry Pi, Arduino',
+  //   duration: 'Oct 2022 - Dec 2022',
+  //   role: 'Software Engineer',
+  //   description: 'Coded Guitar Hero video game in a team of 3 from scratch using Arduino and Raspberry Pi\'s.\
+  //   Processed i/o from guitar controller and Arduino, used wireless transmitters for guitar controller and Fast Fourier Transform to process notes.',
+  //   show_role: false,
+  // },
 ];
 export default function Exp() {
   return (
@@ -72,7 +72,7 @@ export default function Exp() {
           Technical
         </h2>
         <p className="mt-4 text-lg text-gray-300">
-          Here are a few of my past experiences and projects.
+          Here are a few of my past experiences.
         </p>
         {experiences.map((experience) => (
           <motion.div
