@@ -12,10 +12,11 @@ export default function Home() {
                 <h1 className="text-4xl sm:text-7xl text-white font-bold">Adam Zhao</h1>
                 <p className="text-md sm:text-lg text-gray-200">Welcome to my website!</p>
             </div>
-            <div className="gap-6 sm:gap-12 grid text-center lg:mb-0 grid-cols-3 lg:text-left">
+            <div className="gap-6 sm:gap-12 grid text-center lg:mb-0 grid-cols-4 lg:text-left">
                 {[
                     { title: "About", description: "An intro to me.", color: "green", link: "/about" },
                     { title: "Technical", description: "Technical background.", color: "pink", link: "/exp" },
+                    { title: "Projects", description: "Past projects.", color: "blue", link: "/projects" },
                     { title: "More", description: "Other tidbits.", color: "orange", link: "/other" }
                 ].map((item, index) => {
                     return (
